@@ -51,34 +51,6 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Form Validation
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Basic validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields!');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address!');
-        return;
-    }
-    
-    // Success message (in a real application, you would send the data to a server)
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    contactForm.reset();
-});
-
 // Skill Progress Animation on Scroll
 const skillProgressBars = document.querySelectorAll('.skill-progress');
 const observer = new IntersectionObserver((entries) => {
