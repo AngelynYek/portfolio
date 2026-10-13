@@ -35,6 +35,6 @@ export const folders = [
   { id: 'about', name: 'About me', number: '01', note: 'the person behind it all', color: 'green', icon: '☺' },
   { id: 'skills', name: 'Skills', number: '02', note: 'a few things in my toolbox', color: 'blue', icon: '✳' },
   { id: 'projects', name: 'Projects', number: '03', note: 'ideas, brought to life', color: 'pink', icon: '↗' },
-  { id: 'learning', name: 'Currently learning', number: '04', note: 'forever a work in progress', color: 'yellow', icon: '✎' },
-  { id: 'contact', name: 'Contact', number: '05', note: 'a hello could be a start', color: 'green', icon: '♡' },
+  { id: 'learning', name: 'Currently learning', number: '04', note: 'forever a work in progress', color: 'green', icon: '✎' },
+  { id: 'contact', name: 'Contact', number: '05', note: 'a hello could be a start', color: 'yellow', icon: '♡' },
 ];

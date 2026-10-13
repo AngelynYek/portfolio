@@ -25,11 +25,11 @@ Deploy the generated `dist/` directory to any static host. Preview the build wit
 - **Resume:** Add `assets/resume.pdf`, set `portfolio.resume.url` to `./assets/resume.pdf`, and clear the sample note. The current download is a labeled text template, not a finished resume.
 - **Contact:** Set `portfolio.contact.email`, `github`, and `linkedin`. Missing details never link to invented accounts.
 - **Projects:** Replace concept descriptions and add real HTTPS URLs. Preview compositions are in `main.js`. Update sample labels in `index.html` once real content is supplied.
-- **Portrait:** Replace the inline flower illustration in `index.html` with a photo and descriptive alt text if desired.
+- **Portrait:** Replace the labeled monogram placeholder in `index.html` with your photo and descriptive alt text.
 - **Appearance:** Shared colors and typography are in `styles.css`. The background is `#FAFAF7`, the four accents match the reference, and no gradients are used.
 
 ## Structure
 
-`index.html` owns semantic sections, `content.js` owns editable data, `main.js` renders repeating components and opens native dialogs, and `styles.css` owns the shared visual system and responsive layouts. Navigation and downloads use native HTML. Project dialogs support Escape, keyboard focus containment, and focus return. Folder motion honors reduced-motion preferences.
+`index.html` owns semantic sections, `content.js` owns editable data, `main.js` renders repeating components and opens native dialogs, and `styles.css` owns the shared visual system and responsive layouts. The design uses wide poster typography, an abstract flat-color background, and layered translucent folders cropped at the cover edge. Navigation and downloads use native HTML. Project dialogs support Escape, keyboard focus containment, and focus return. Folder motion honors reduced-motion preferences.
 
 The Node scripts serve and copy static files. The preview server binds to loopback and is only for local development. Tests check section targets, resume availability, project integrity, and palette/motion requirements. Google Fonts enhance the typography, with system fallbacks when unavailable.
