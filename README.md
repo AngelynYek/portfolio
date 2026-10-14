@@ -1,35 +1,25 @@
-# Angelyn Yek — Portfolio
+# Angelyn Yek's pixel portfolio
 
-A responsive, folder-inspired personal portfolio using HTML, CSS, and JavaScript, with no framework or runtime dependencies.
+A dependency-free, responsive portfolio built with native JavaScript, a pixel-art canvas island, and the six supplied animated GIFs. The canvas is decorative; every Pokémon is a keyboard-accessible HTML control. Sections share a native dialog with Escape, focus management, and a Back button.
 
-## Run locally
+## Run
 
-With Node.js 22 or later:
-
-```sh
-npm run dev
-```
-
-Open http://127.0.0.1:5173. No dependency installation is required. Refresh the browser after editing files.
-
-```sh
-npm test
-npm run build
-```
-
-Deploy the generated `dist/` directory to any static host. Preview the build with `node scripts/serve.mjs --dist` instead of the development command.
+- `npm run dev` — local preview on http://127.0.0.1:5173
+- `npm test` — content and scene checks
+- `npm run build` — static output in `dist/`
 
 ## Personalize
 
-- **Content:** Edit `content.js` for your bio, skills, projects, learning list, and contact links. Personal details and project concepts are explicitly labeled samples.
-- **Resume:** Add `assets/resume.pdf`, set `portfolio.resume.url` to `./assets/resume.pdf`, and clear the sample note. The current download is a labeled text template, not a finished resume.
-- **Contact:** Set `portfolio.contact.email`, `github`, and `linkedin`. Missing details never link to invented accounts.
-- **Projects:** Replace concept descriptions and add real HTTPS URLs. Preview compositions are in `main.js`. Update sample labels in `index.html` once real content is supplied.
-- **Portrait:** Replace the labeled monogram placeholder in `index.html` with your photo and descriptive alt text.
-- **Appearance:** Shared colors and typography are in `styles.css`. The background is `#FAFAF7`, the four accents match the reference, and no gradients are used.
+Edit `content.js` for the biography, skills, projects, learning topics, and contact details. Empty sections intentionally show “coming soon” rather than invented credentials.
 
-## Structure
+To add your resume, place your PDF at `assets/resume.pdf`, set `portfolio.resume.url` to `./assets/resume.pdf`, and set `isSample` to `false`. Both the Talonflame sprite and About screen use this setting. Until then, the download is explicitly marked as a sample.
 
-`index.html` owns semantic sections, `content.js` owns editable data, `main.js` renders repeating components and opens native dialogs, and `styles.css` owns the shared visual system and responsive layouts. The design uses wide poster typography, an abstract flat-color background, and layered translucent folders cropped at the cover edge. Navigation and downloads use native HTML. Project dialogs support Escape, keyboard focus containment, and focus return. Folder motion honors reduced-motion preferences.
+Sprite placement, section mappings, and transparent crop bounds are also in `content.js`. The original GIFs are unchanged. `scene.js` draws the island; `main.js` handles interactions; `styles.css` styles the page and shared Pokédex frame.
 
-The Node scripts serve and copy static files. The preview server binds to loopback and is only for local development. Tests check section targets, resume availability, project integrity, and palette/motion requirements. Google Fonts enhance the typography, with system fallbacks when unavailable.
+Animation can be paused, and reduced-motion preferences display static snapshots automatically. Hover labels also appear on keyboard focus; the Show labels button helps touch users.
+
+## Assets and credits
+
+Sprites and `assets/pokedex-frame.jpg` were supplied by the portfolio owner. Artist credits from the supplied filenames are displayed in the Credits screen and listed in `content.js`. Pokémon is owned by Nintendo, Game Freak, and Creatures; this is an independent portfolio.
+
+The PKMN Western font is by nue-of-k: https://github.com/nue-of-k/pkmn (MIT license, included in `assets/fonts/LICENSE.txt`). The isometric café scene is code-drawn for this portfolio, using the supplied recording as a composition reference.

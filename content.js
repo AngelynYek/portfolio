@@ -1,40 +1,26 @@
-// Personalize this file, then replace the sample resume with your own PDF.
+// Edit personal content here. Pokémon positions use the 320 × 280 scene grid.
 export const portfolio = {
-  bio: {
-    heading: 'A curious mind. A maker at heart.',
-    paragraphs: [
-      'This is where your story goes. Share what you love creating, what sparked your interest, and the kind of work you want to put into the world.',
-      'Outside of projects, add a few things that feel like you: a favorite hobby, a small everyday joy, or whatever keeps you inspired.',
-    ],
-    tags: ['Your role here', 'Your location here', 'A little fun fact'],
-  },
-  resume: {
-    url: './assets/resume-template.txt',
-    note: 'Sample resume template — replace with your own PDF.',
-  },
-  skills: [
-    { title: 'Development', subtitle: 'BRINGING IDEAS TO LIFE', icon: '</>', color: 'blue', items: ['HTML & CSS', 'JavaScript', 'React', 'Git & GitHub'] },
-    { title: 'Design', subtitle: 'MAKING THE DETAILS COUNT', icon: '✳', color: 'pink', items: ['Figma', 'UI design', 'Responsive layouts', 'Prototyping'] },
-    { title: 'The human side', subtitle: 'HOW I APPROACH THE WORK', icon: '♡', color: 'yellow', items: ['Problem solving', 'Collaboration', 'Attention to detail', 'Curiosity'] },
-  ],
-  projects: [
-    { id: 'bloom', title: 'Bloom & Grow', category: 'WEBSITE CONCEPT', description: 'A gentle little home for all things green.', tags: ['Web design', 'Frontend'], color: 'green', preview: 'plant', details: 'An illustrative plant-shop concept with a calm editorial layout, product storytelling, and soft botanical details. Replace this example with your project: explain the problem, your role, what you built, and what you learned.', url: null },
-    { id: 'daylight', title: 'A Little Daylight', category: 'APP CONCEPT', description: 'Making room for the small, good things.', tags: ['UI / UX', 'Product design'], color: 'blue', preview: 'journal', details: 'An illustrative daily-journal concept focused on approachable prompts and a simple writing experience. Add your own case study here, including the decisions you made and the outcome of your work.', url: null },
-    { id: 'portfolio', title: 'This Little Portfolio', category: 'PERSONAL WEBSITE', description: 'A digital filing cabinet, with a personal touch.', tags: ['HTML & CSS', 'JavaScript'], color: 'pink', preview: 'portfolio', details: 'A responsive portfolio inspired by paper folders and a soft pastel palette. Built with semantic HTML, shared CSS design tokens, and a single editable content file. Features accessible folder navigation, reduced-motion support, and project details in native dialogs.', url: '#home' },
-  ],
-  learning: [
-    { title: 'Thoughtful interactions', description: 'Small details that make interfaces feel natural.', status: 'EXPLORING' },
-    { title: 'Accessible by design', description: 'Making the web a welcoming place for everyone.', status: 'IN PROGRESS' },
-    { title: 'Better, cleaner code', description: 'Building good habits, one project at a time.', status: 'ALWAYS' },
-  ],
-  // Set real values to activate contact links; null values never send visitors to fake accounts.
+  name: 'Angelyn Yek',
+  about: ['Welcome to my little corner of the world. I’m Angelyn Yek.', 'My story is coming soon. In the meantime, take a look around!'],
+  skills: [], // { title: 'Development', items: ['JavaScript', 'React'] }
+  projects: [], // { title: 'My project', description: 'What I built and why.', url: 'https://...' }
+  learning: [], // { title: 'A new skill', description: 'What I am exploring.' }
   contact: { email: null, github: null, linkedin: null },
+  // Add assets/resume.pdf, update url, and set isSample to false.
+  resume: { url: './assets/resume-template.txt', isSample: true },
 };
-
-export const folders = [
-  { id: 'about', name: 'About me', number: '01', note: 'the person behind it all', color: 'green', icon: '☺' },
-  { id: 'skills', name: 'Skills', number: '02', note: 'a few things in my toolbox', color: 'blue', icon: '✳' },
-  { id: 'projects', name: 'Projects', number: '03', note: 'ideas, brought to life', color: 'pink', icon: '↗' },
-  { id: 'learning', name: 'Currently learning', number: '04', note: 'forever a work in progress', color: 'green', icon: '✎' },
-  { id: 'contact', name: 'Contact', number: '05', note: 'a hello could be a start', color: 'yellow', icon: '♡' },
+export const pokemon = [
+  { id: 'about', label: 'About', name: 'Sylveon', file: 'sylveon', x: 178, y: 227, width: 36, size: [96,96], bounds: [17,25,70,84] },
+  { id: 'skills', label: 'Skills', name: 'Meowstic', file: 'meowstic', x: 86, y: 219, width: 32, size: [80,80], bounds: [13,14,65,80] },
+  { id: 'projects', label: 'Projects', name: 'Hisuian Zoroark', file: 'zoroark', x: 126, y: 177, width: 49, size: [116,96], bounds: [21,2,114,93] },
+  { id: 'learning', label: 'Currently Learning', name: 'Noivern', file: 'noivern', x: 62, y: 121, width: 66, size: [182,182], bounds: [14,35,168,181] },
+  { id: 'contact', label: 'Contact', name: 'Absol', file: 'absol', x: 264, y: 186, width: 42, size: [67,68], bounds: [2,2,67,66] },
+  { id: 'resume', label: 'Download Resume', name: 'Talonflame', file: 'talonflame', x: 234, y: 88, width: 53, size: [125,108], bounds: [2,3,116,103] },
+];
+export const credits = [
+ 'Noivern sprite: diegotoon20', 'Absol sprite: Superior-Absol',
+ 'Hisuian Zoroark sprite: Hellfire0Raptor', 'Meowstic sprite: SkidMarc25',
+ 'Sylveon sprite: Pompomking', 'Talonflame sprite: Snivy101',
+ 'PKMN Western font: nue-of-k (MIT license)',
+ 'Pokémon belongs to Nintendo, Game Freak, and Creatures. This is an independent personal portfolio.',
 ];

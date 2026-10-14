@@ -1,29 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
-import { portfolio, folders } from '../content.js';
+import { portfolio, pokemon } from '../content.js';
+import { drawIsland } from '../scene.js';
 
-test('every folder targets an existing, uniquely identified section', async () => {
-  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
-  assert.equal(folders.length, 5);
-  assert.equal(new Set(folders.map((folder) => folder.id)).size, 5);
-  for (const folder of folders) assert.ok(html.includes(`<section id="${folder.id}"`));
-  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(new Set(ids).size, ids.length);
-});
-
-test('resume download exists and projects have distinct IDs', async () => {
-  await access(new URL(`../${portfolio.resume.url}`, import.meta.url));
-  assert.equal(new Set(portfolio.projects.map((project) => project.id)).size, portfolio.projects.length);
-  for (const project of portfolio.projects) {
-    assert.ok(project.title && project.details && project.tags.length);
-    assert.ok(!project.url || project.url.startsWith('https://') || project.url.startsWith('#'));
+test('all six controls have available sprites and valid on-scene crop bounds', async () => {
+  assert.deepEqual(new Set(pokemon.map(p=>p.id)), new Set(['about','skills','projects','learning','contact','resume']));
+  for (const p of pokemon) {
+    await access(new URL(`../assets/sprites/${p.file}.gif`,import.meta.url));
+    const [l,t,r,b]=p.bounds;
+    assert(l>=0 && t>=0 && r<=p.size[0] && b<=p.size[1] && r>l && b>t);
+    const h=p.width/(r-l)*(b-t);
+    assert(p.x-p.width/2>=0 && p.x+p.width/2<=320 && p.y-h>=0 && p.y<=280);
   }
+  await access(new URL(`../${portfolio.resume.url}`,import.meta.url));
 });
-
-test('styling preserves the requested palette, no gradients, and reduced motion', async () => {
-  const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
-  for (const color of ['#FAFAF7', '#D5D98F', '#CEE1F2', '#F7A9A5', '#F0D9A3']) assert.ok(css.includes(color));
-  assert.doesNotMatch(css, /(?:linear|radial|conic)-gradient\(/);
-  assert.match(css, /prefers-reduced-motion:reduce/);
+test('pixel renderer produces finite, bounded drawing commands', () => {
+  let pixels=0;
+  const ctx={clearRect(){},fillRect(x,y,w,h){assert([x,y,w,h].every(Number.isFinite));assert(x>=0&&x<=320&&y>=0&&y<=280);assert(w>=0&&h>=0);pixels++;}};
+  drawIsland({getContext:()=>ctx});
+  assert(pixels>1000);
+});
+test('required frame and font are packaged; no gradients', async () => {
+  await access(new URL('../assets/pokedex-frame.jpg',import.meta.url));
+  await access(new URL('../assets/fonts/pkmn_w.ttf',import.meta.url));
+  const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');
+  assert(!/gradient\(/i.test(css));
 });

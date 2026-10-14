@@ -1,74 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#FAFAF7">
-    <meta name="description" content="Step inside Angelyn Yek's personal portfolio. A little about me, the things I make, and what I'm learning along the way.">
-    <title>Angelyn Yek — A little collection of me</title>
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="./main.js"></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#about">Skip to content</a>
-    <header class="site-header">
-      <a href="#home">ANGELYN YEK / PORTFOLIO</a>
-      <nav aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#projects">SELECTED WORK</a><a href="#contact">GET IN TOUCH ↗</a></nav>
-    </header>
-    <main>
-      <section id="home" class="hero" aria-labelledby="hero-title">
-        <div class="cover-strip"><span>2026 / SELECTED COLLECTION</span><span>IDEAS · EXPERIMENTS · WORK IN PROGRESS</span></div>
-        <svg class="cover-art" viewBox="0 0 600 600" aria-hidden="true"><g fill="currentColor"><path d="M300 300Q40 180 135 35Q330-30 300 300Z"/><path d="M300 300Q420 40 565 135Q630 330 300 300Z"/><path d="M300 300Q560 420 465 565Q270 630 300 300Z"/><path d="M300 300Q180 560 35 465Q-30 270 300 300Z"/></g></svg>
-        <div class="cover-title">
-          <span class="cover-year" aria-hidden="true">#2026</span><span class="registration" aria-hidden="true">+ &nbsp; +</span>
-          <h1 id="hero-title" aria-label="Portfolio"><svg viewBox="0 0 1000 145" preserveAspectRatio="none" role="presentation" aria-hidden="true"><text x="0" y="121" textLength="986" lengthAdjust="spacingAndGlyphs">Portfolio</text></svg></h1>
-        </div>
-        <div class="cover-details">
-          <div class="cover-subtitle"><p><span>Selected</span> works.</p><span class="signature">Angelyn Yek</span></div>
-          <div class="cover-bio"><h2>Angelyn Yek / Portfolio ↘</h2><p class="cover-index">( About ) &nbsp; ( Projects ) &nbsp; ( Possibilities )</p><p>A collection of things I've made, ideas I'm exploring, and everything I'm learning along the way.</p></div>
-        </div>
-        <div class="folder-hint">OPEN A FOLDER TO EXPLORE <span aria-hidden="true">↙</span></div>
-        <nav class="folder-shelf" aria-label="Portfolio sections" id="folder-navigation"></nav>
-
-      </section>
-
-      <section id="about" class="section about-section" aria-labelledby="about-title">
-        <div class="section-heading"><div><span class="eyebrow">01 / INTRODUCTION</span><h2 id="about-title">About Me</h2></div><span class="section-stamp">NICE TO MEET YOU <span aria-hidden="true">✳</span></span></div>
-        <div class="about-layout">
-          <div class="portrait-folder">
-            <span class="folder-label">ANGELYN / 01</span>
-            <div class="portrait-art" role="img" aria-label="Portrait placeholder for Angelyn Yek">
-              <span class="art-label">A LITTLE INTRODUCTION</span>
-              <span class="portrait-monogram" aria-hidden="true">ay.</span>
-              <span class="portrait-placeholder">YOUR PHOTO HERE</span>
-            </div>
-            <div class="portrait-bottom"><span>ANGELYN YEK</span><span>2026</span></div>
-          </div>
-          <div class="about-copy"><span class="mini-label">A LITTLE ABOUT THE PERSON BEHIND THE WORK</span><h3>Hi, I’m Angelyn Yek! <span aria-hidden="true">✳</span></h3><p class="about-lead" id="bio-heading"></p><div id="bio-copy"></div><div id="personal-tags" class="tag-list"></div><a id="resume-link" class="button button-dark" download>Download resume <span aria-hidden="true">↓</span></a><p id="resume-note" class="content-note"></p></div>
-        </div>
-      </section>
-
-      <section id="skills" class="section skills-section" aria-labelledby="skills-title">
-        <div class="section-heading"><div><span class="eyebrow">02 / TOOLS & CAPABILITIES</span><h2 id="skills-title">My Skills</h2></div><p>A mix of logic, creativity,<br>and learning by doing.</p></div>
-        <p class="content-note section-note">Sample skills — ready to make your own.</p><div class="skills-grid" id="skills-grid"></div>
-        <div class="skills-footnote"><span aria-hidden="true">✳</span><p>The best tool? A willingness to figure things out.</p><span class="handwritten">stay curious!</span></div>
-      </section>
-
-      <section id="projects" class="section projects-section" aria-labelledby="projects-title">
-        <div class="section-heading"><div><span class="eyebrow">03 / SELECTED WORK</span><h2 id="projects-title">Projects</h2></div><span class="section-stamp">THE PROJECT FILES <span aria-hidden="true">↙</span></span></div>
-        <p class="content-note section-note">Illustrative project concepts. Replace these with your own work.</p><div class="project-list" id="project-list"></div>
-      </section>
-
-      <section id="learning" class="section learning-section" aria-labelledby="learning-title">
-        <div class="learning-intro"><span class="eyebrow">04 / STILL A WORK IN PROGRESS</span><h2 id="learning-title">Currently<br>Learning</h2><p>There's always another idea to explore.<br>Here's a peek at the next chapter.</p><span class="handwritten">one little step at a time ↗</span></div>
-        <div class="learning-paper"><span class="paper-tape" aria-hidden="true"></span><div class="paper-topline"><span>ON MY LEARNING LIST</span><span aria-hidden="true">✎</span></div><p class="content-note">Sample learning notes</p><ul id="learning-list"></ul><p class="paper-footer">Progress over perfection. Always.</p></div>
-      </section>
-
-      <section id="contact" class="section contact-section" aria-labelledby="contact-title"><div class="contact-top"><span class="eyebrow">05 / CONTACT</span><span aria-hidden="true">↗</span></div><h2 id="contact-title">Get in touch.</h2><div class="contact-bottom"><p>A project in mind, an idea to share,<br>or just a friendly hello? I'd love to hear it.</p><div id="contact-actions"></div></div><p id="contact-note" class="content-note"></p></section>
-    </main>
-    <footer><a href="#home" class="footer-name">Angelyn Yek <span aria-hidden="true">✳</span></a><p>A little collection, made with care. <span id="year"></span></p><a href="#home">BACK TO TOP ↑</a></footer>
-    <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">INSIDE THE PROJECT FILE</span><button class="icon-button" id="close-dialog" aria-label="Close project details">×</button></div><p class="mini-label" id="dialog-type"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="tag-list" id="dialog-tags"></div><a id="dialog-link" class="button button-dark" target="_blank" rel="noopener noreferrer">Visit project ↗</a><p id="dialog-note" class="content-note"></p></dialog>
-    <noscript><p class="noscript-note">Enable JavaScript to view the portfolio's editable content and project details.</p></noscript>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#CEE1F2"><meta name="description" content="Explore Angelyn Yek's little pixel world.">
+<title>Angelyn Yek · A little world of mine</title>
+<link rel="icon" href="./assets/favicon.svg"><link rel="stylesheet" href="./styles.css">
+<script type="module" src="./main.js"></script>
+</head>
+<body>
+<header><a class="wordmark" href="./"><span class="pokeball" aria-hidden="true"></span>ANGELYN YEK</a><button id="motion-toggle" class="quiet-button" aria-pressed="false">PAUSE SPRITES</button></header>
+<main>
+<div class="intro"><p class="eyebrow">A SMALL PLACE. A LOT TO EXPLORE.</p><h1>A little world of mine.</h1></div>
+<div class="world"><canvas id="island" width="320" height="280" aria-hidden="true"></canvas><nav id="pokemon" aria-label="Portfolio sections"></nav></div>
+<div class="welcome-box"><span aria-hidden="true">▶</span><p>Hi! I'm Angelyn.<br><span>Choose a Pokémon to get to know me.</span></p><button id="labels-toggle" class="quiet-button" aria-pressed="false">SHOW LABELS</button></div>
+<p class="hint">HOVER TO DISCOVER · CLICK OR TAP TO EXPLORE</p>
+</main>
+<footer><span>ANGELYN'S WORLD / PORTFOLIO</span><button id="credits-button" class="quiet-button">CREDITS</button></footer>
+<dialog id="pokedex" aria-labelledby="entry-title"><div class="pokedex-shell"><h2 id="entry-title"></h2><div id="entry-content" tabindex="0"></div><div class="pokedex-controls"><p id="entry-number"></p><button id="back-button" class="pixel-button">&lt; BACK</button><p class="back-hint">BACK TO THE ISLAND</p></div></div></dialog>
+<noscript>Please enable JavaScript to explore this portfolio.</noscript>
+</body></html>
