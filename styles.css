@@ -568,3 +568,8 @@ h1{
     font-size:20px
   }
 }
+/* Keep the dialogue controls above the scene's transparent lower margin. */
+.welcome-box {
+  position: relative;
+  z-index: 1;
+}
