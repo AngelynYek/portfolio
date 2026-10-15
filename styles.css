@@ -176,7 +176,7 @@ h1{
   border-radius:50%;
   z-index:-1
 }
-.pokemon[data-id="learning"] .sprite-shadow,.pokemon[data-id="resume"] .sprite-shadow{
+.pokemon[data-id="learning"] .sprite-shadow,.pokemon[data-id="achievements"] .sprite-shadow{
   display:none
 }
 .tooltip{

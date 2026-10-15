@@ -5,7 +5,7 @@ import { portfolio, pokemon } from '../content.js';
 import { drawIsland } from '../scene.js';
 
 test('all six controls have available sprites and valid on-scene crop bounds', async () => {
-  assert.deepEqual(new Set(pokemon.map(p=>p.id)), new Set(['about','skills','projects','learning','contact','resume']));
+  assert.deepEqual(new Set(pokemon.map(p=>p.id)), new Set(['about','skills','projects','learning','contact','achievements']));
   for (const p of pokemon) {
     await access(new URL(`../assets/sprites/${p.file}.gif`,import.meta.url));
     const [l,t,r,b]=p.bounds;

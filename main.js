@@ -47,11 +47,16 @@ function openEntry(id) {
       group.items.forEach(skill => list.append(element('li', skill)));
       content.append(list);
     }
-  } else if (id === 'projects' || id === 'learning') {
-    if (!portfolio[id].length) addParagraph(id === 'projects' ? 'New adventures are in the making. My projects will appear here soon.' : 'Always a work in progress. I’ll share what I’m learning here soon.');
+  } else if (id === 'projects' || id === 'learning' || id === 'achievements') {
+    const emptyMessages = {
+      projects: 'New adventures are in the making. My projects will appear here soon.',
+      learning: 'Always a work in progress. I’ll share what I’m learning here soon.',
+      achievements: 'My achievements and milestones will appear here soon.',
+    };
+    if (!portfolio[id].length) addParagraph(emptyMessages[id]);
     for (const item of portfolio[id]) {
       content.append(element('h3', item.title)); addParagraph(item.description);
-      if (item.url) addExternalLink('VIEW PROJECT >', item.url);
+      if (item.url) addExternalLink(id === 'projects' ? 'VIEW PROJECT >' : 'VIEW DETAILS >', item.url);
     }
   } else if (id === 'contact') {
     addParagraph('A little hello could be the start of something good.');
@@ -69,11 +74,11 @@ function openEntry(id) {
 }
 
 for (const entry of pokemon) {
-  const isResume = entry.id === 'resume';
-  const button = isResume ? resumeLink('pokemon') : element('button', null, 'pokemon');
+  const button = element('button', null, 'pokemon');
   button.dataset.id = entry.id;
-  button.setAttribute('aria-label', `${entry.label}${isResume && portfolio.resume.isSample ? ' (sample file)' : ''} — ${entry.name}`);
-  if (!isResume) { button.setAttribute('aria-haspopup', 'dialog'); button.addEventListener('click', () => openEntry(entry.id)); }
+  button.setAttribute('aria-label', `${entry.label} — ${entry.name}`);
+  button.setAttribute('aria-haspopup', 'dialog');
+  button.addEventListener('click', () => openEntry(entry.id));
   if (entry.x > 160) button.classList.add('right');
   const [left, top, right, bottom] = entry.bounds;
   const width = right - left, height = bottom - top;
@@ -89,7 +94,7 @@ for (const entry of pokemon) {
   img.addEventListener('load', () => still.getContext('2d').drawImage(img,0,0), {once:true});
   crop.append(img,still); art.append(crop);
   const tooltip = element('span', entry.label, 'tooltip'); tooltip.setAttribute('aria-hidden','true');
-  tooltip.append(element('small', isResume && portfolio.resume.isSample ? 'SAMPLE FILE · REPLACE LATER' : entry.name));
+  tooltip.append(element('small', entry.name));
   button.append(art,tooltip); document.querySelector('#pokemon').append(button);
 }
 function updateMotion() {

@@ -10,9 +10,9 @@ A dependency-free, responsive portfolio built with native JavaScript, a pixel-ar
 
 ## Personalize
 
-Edit `content.js` for the biography, skills, projects, learning topics, and contact details. Empty sections intentionally show “coming soon” rather than invented credentials.
+Edit `content.js` for the biography, skills, projects, learning topics, achievements, and contact details. Empty sections intentionally show “coming soon” rather than invented credentials. Talonflame opens the Achievements screen; add entries to `portfolio.achievements` using a title, description, and optional URL.
 
-To add your resume, place your PDF at `assets/resume.pdf`, set `portfolio.resume.url` to `./assets/resume.pdf`, and set `isSample` to `false`. Both the Talonflame sprite and About screen use this setting. Until then, the download is explicitly marked as a sample.
+The About screen contains the resume download. To replace it, add your PDF under `assets/`, update `portfolio.resume.url`, and keep `isSample` set to `false`.
 
 Sprite placement, section mappings, and transparent crop bounds are also in `content.js`. The original GIFs are unchanged. `scene.js` draws the island; `main.js` handles interactions; `styles.css` styles the page and shared Pokédex frame.
 
