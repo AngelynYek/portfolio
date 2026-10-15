@@ -59,8 +59,8 @@ function openEntry(id) {
       if (item.url) addExternalLink(id === 'projects' ? 'VIEW PROJECT >' : 'VIEW DETAILS >', item.url);
     }
   } else if (id === 'contact') {
-    addParagraph('A little hello could be the start of something good.');
-    const {email, github, linkedin} = portfolio.contact;
+    const {description, email, github, linkedin} = portfolio.contact;
+    if (description) addParagraph(description);
     if (!email && !github && !linkedin) addParagraph('Contact details coming soon.', 'status');
     if (email) {
       const link = element('a', email); link.href = `mailto:${encodeURIComponent(email)}`; content.append(link, document.createElement('br'));
