@@ -4,8 +4,6 @@ import { drawIsland } from './scene.js';
 drawIsland(document.querySelector('#island'));
 const dialog = document.querySelector('#pokedex');
 const content = document.querySelector('#entry-content');
-const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
-let paused = motionQuery.matches;
 
 function element(tag, text, className) {
   const node = document.createElement(tag);
@@ -89,23 +87,12 @@ for (const entry of pokemon) {
   art.append(element('span', null, 'sprite-shadow'));
   const crop = element('span', null, 'sprite-crop');
   const img = new Image(); img.alt = ''; img.src = `./assets/sprites/${entry.file}.gif`;
-  const still = element('canvas'); still.width = entry.size[0]; still.height = entry.size[1];
-  for (const node of [img, still]) Object.assign(node.style,{width:`${entry.size[0]/width*100}%`,height:`${entry.size[1]/height*100}%`,left:`${-left/width*100}%`,top:`${-top/height*100}%`});
-  img.addEventListener('load', () => still.getContext('2d').drawImage(img,0,0), {once:true});
-  crop.append(img,still); art.append(crop);
+  Object.assign(img.style,{width:`${entry.size[0]/width*100}%`,height:`${entry.size[1]/height*100}%`,left:`${-left/width*100}%`,top:`${-top/height*100}%`});
+  crop.append(img); art.append(crop);
   const tooltip = element('span', entry.label, 'tooltip'); tooltip.setAttribute('aria-hidden','true');
   tooltip.append(element('small', entry.name));
   button.append(art,tooltip); document.querySelector('#pokemon').append(button);
 }
-function updateMotion() {
-  document.body.classList.toggle('paused', paused);
-  const toggle = document.querySelector('#motion-toggle');
-  toggle.setAttribute('aria-pressed', String(paused));
-  toggle.textContent = paused ? 'PLAY SPRITES' : 'PAUSE SPRITES';
-}
-updateMotion();
-motionQuery.addEventListener('change', event => { paused=event.matches; updateMotion(); });
-document.querySelector('#motion-toggle').addEventListener('click', () => { paused=!paused; updateMotion(); });
 document.querySelector('#labels-toggle').addEventListener('click', event => {
   const shown=document.body.classList.toggle('labels-visible');
   event.currentTarget.setAttribute('aria-pressed', String(shown));

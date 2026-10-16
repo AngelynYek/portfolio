@@ -16,7 +16,7 @@ The About screen contains the resume download. To replace it, add your PDF under
 
 Sprite placement, section mappings, and transparent crop bounds are also in `content.js`. The original GIFs are unchanged. `scene.js` draws the island; `main.js` handles interactions; `styles.css` styles the page and shared Pokédex frame.
 
-Animation can be paused, and reduced-motion preferences display static snapshots automatically. Hover labels also appear on keyboard focus; the Show labels button helps touch users.
+The supplied GIF sprites animate continuously. Reduced-motion preferences disable CSS hover movement and popup transitions. Hover labels also appear on keyboard focus; the Show labels button helps touch users.
 
 ## Assets and credits
 

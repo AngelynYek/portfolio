@@ -1,6 +1,6 @@
 export const portfolio = {
   name: 'Angelyn Yek',
-  about: ['Welcome to my little corner of the world. I’m Angelyn Yek.',
+  about: ['Welcome to my portfolio!. I’m Angelyn Yek.',
           'My story is coming soon. In the meantime, take a look around!'],
   skills: [{ title: 'Programming Languages & Frameworks', items: ['HTML', 'CSS', 'JavaScript', 'Java', 'Python', 'Scala', 'React'] }, 
            { title: 'Version Control & Deployment', items: ['Git', 'Github', 'Vercel'] },
@@ -11,7 +11,7 @@ export const portfolio = {
   projects: [{ title: 'Soren Studio', description:'Soren Studio is a personal fashion website inspired by timeless clothing, soft neutrals and a minimal shopping experience. Browse the collections and try a complete shopping journey, from choosing a size to viewing an order confirmation. A responsive fashion storefront built with React, Vite and plain CSS.', url: 'https://soren-studio-website.vercel.app/' },
              { title: 'Solace Cafe', description: 'A responsive front-end café website that allows customers to explore the menu, reserve a table and simulate an online ordering and checkout experience. Built with HTML, CSS and JavaScript.', url: 'https://angelynyek.github.io/solace-cafe-website-project/index.html' },
              { title: 'Pokemon Ga-Ole', description: 'A Pokemon Ga Ole inspired project built with Java that features Pokemon battles, disk collection and double rush mechanic', url: 'https://github.com/AngelynYek/pokemon-ga-ole' }],
-  learning: [{ title: 'A new skill', description: 'What I am exploring.' }], 
+  learning: [{title: 'Advanced Figma Prototyping', description: 'Bridging graphic design and front-end development by creating interactive, user-centered application prototypes.' }],
   achievements: [{ title: 'Dean List', description: 'Details about the achievement.'}], 
   contact: { description: 'Open to internship opportunities or even just a chat! Feel free to reach out :D', email: 'angeyek23@gmail.com', github: 'https://github.com/AngelynYek', linkedin: 'https://www.linkedin.com/in/angelyn-yek-yin-yin-216b61337' },
   resume: { url: './assets/AngelynYek_Internship_Resume.pdf', isSample: false },

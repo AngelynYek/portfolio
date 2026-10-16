@@ -145,19 +145,10 @@ h1{
   inset:0;
   overflow:hidden
 }
-.sprite-crop img,.sprite-crop canvas{
+.sprite-crop img{
   position:absolute;
   image-rendering:pixelated;
   max-width:none
-}
-.sprite-crop canvas{
-  display:none
-}
-.paused .sprite-crop img{
-  display:none
-}
-.paused .sprite-crop canvas{
-  display:block
 }
 .pokemon:hover,.pokemon:focus-visible{
   z-index:100!important
@@ -572,4 +563,5 @@ h1{
 .welcome-box {
   position: relative;
   z-index: 1;
+  margin-top: 24px;
 }
