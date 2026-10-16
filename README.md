@@ -1,24 +1,14 @@
 # Angelyn Yek's portfolio
 
-## Local development
+Hi and welcome to my portfolio! :D I designed this portfolio to showcase my software development skills with a creative twist. Drawing inspiration from my love for Pokémon, I built a simple but interactive space that highlights my coding projects and technical background in a fun way.
 
-Run `npm run dev`, then open http://127.0.0.1:5173. Save changes and refresh the browser.
+## Live Site
 
-## Build
+Checkout the live portfolio here: https://portfolio-ange-vert.vercel.app
 
-Run `npm run build`. This replaces the generated `dist/` directory, so deleted assets are not carried into the next deployment. Keep original files outside `dist/`.
-
-## Tests
-
-Browser tests use an installed Google Chrome. Install the development tools once:
-
-```sh
-npm ci
-```
-
-Run `npm test` for all checks. `npm run test:unit` runs the fast asset, drawing, and clean-build checks; `npm run test:browser` builds the site and checks its interactions in headless Chrome, including downloading the resume. No separate test browser download is needed.
-
-Stop the local development server before running browser tests: the tests start their own server on port 5173 to check the freshly built site.
-
-Playwright is used only for testing. The published website has no JavaScript runtime dependencies.
-
+## Contents
+- About Me
+- Projects
+- Skills
+- Achievement
+- Current Learning
