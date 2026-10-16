@@ -11,8 +11,8 @@ function element(tag, text, className) {
   if (className) node.className = className;
   return node;
 }
-function resumeLink(className = 'pixel-button') {
-  const link = element('a', portfolio.resume.isSample ? 'DOWNLOAD SAMPLE RESUME' : 'DOWNLOAD RESUME', className);
+function resumeLink() {
+  const link = element('a', portfolio.resume.isSample ? 'DOWNLOAD SAMPLE RESUME' : 'DOWNLOAD RESUME', 'pixel-button');
   link.href = portfolio.resume.url;
   link.download = '';
   return link;
@@ -82,7 +82,6 @@ for (const entry of pokemon) {
   const width = right - left, height = bottom - top;
   Object.assign(button.style, {left:`${entry.x / 320 * 100}%`,top:`${entry.y / 280 * 100}%`,width:`${entry.width / 320 * 100}%`,height:`${entry.width / width * height / 280 * 100}%`,zIndex:Math.round(entry.y)});
   // Crop transparent padding with a viewport, preserving the original animated GIF.
-  button.replaceChildren();
   const art = element('span', null, 'sprite-art');
   art.append(element('span', null, 'sprite-shadow'));
   const crop = element('span', null, 'sprite-crop');

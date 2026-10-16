@@ -1,5 +1,4 @@
 export const portfolio = {
-  name: 'Angelyn Yek',
   about: ['Welcome to my portfolio!. I’m Angelyn Yek.', 
           'I’m a curious developer who enjoys turning ideas into interactive experiences with a little personality. I’m drawn to projects that combine thoughtful design with practical functionality, whether that means creating a welcoming website, figuring out how a feature should work or adding a small detail that makes someone smile.',
           'My projects reflect the different things I enjoy exploring. I’ve built a fashion storefront with a clean, minimal aesthetic, a cosy café website with reservation and ordering interactions and a simple Pokémon-inspired Java game featuring battles and disk collection. Each project gives me a different kind of challenge: thinking through a shopping journey, organising information clearly or connecting game mechanics so that they work together.',
